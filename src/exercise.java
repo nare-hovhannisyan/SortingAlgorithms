@@ -1,19 +1,26 @@
 public class exercise {
 
-    public static void Helper(int i)
-    {
-        for(int j = i; j > 0; j = j/2 )
-        {
-            System.out.println("aaa");
-        }
-    }
-
     public static void main(String[] args)
     {
-        for(int i = 1; i < 10; i =i*2)
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+
+        list.addLast(5);
+        list.addLast(2);
+        list.addLast(11);
+        list.addLast(19);
+        list.addLast(6);
+        list.addLast(4);
+        list.addLast(1);
+
+        //var result = list.first();
+        var result = MergeSortSinglyLinkedList.MergeSort(list.first());
+
+        System.out.println(result);
+        while(result != null)
         {
-            System.out.println("aaa");
-            //Helper(i);
+            System.out.println(result.getElement());
+            result = result.getNext();
         }
+
     }
 }

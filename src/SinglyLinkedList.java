@@ -25,6 +25,9 @@ public class SinglyLinkedList<E> {
     public boolean isEmpty() {return  size ==0;}
     public int size() {return size;}
 
+    public Node<E> first() {return head;}
+    public Node<E> last() { return tail;}
+
     public void addFirst(E newest) {
         head = new Node(newest, head);
         if(size == 0)
